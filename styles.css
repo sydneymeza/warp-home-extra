@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'BasisGrotesk'; 
+  src: url('typefaces/BasisGrotesquePro-Light 2.otf'); 
+}
+@font-face {
+  font-family: 'MabryMonoMRegular'; 
+  src: url('typefaces/MabryMonoPro-Regular.ttf'); 
+}
+@font-face {
+  font-family: 'MonumentGrotesk'; 
+  src: url('typefaces/monument-grotesk-regular.otf'); 
+}
+@font-face {
+  font-family: 'FoundersGroteskLight'; 
+  src: url('typefaces/FoundersGrotesk-Light.otf'); 
+}
+
+h1{
+  font-size: 48px;
+  font-family: 'BasisGrotesk';
+}
+h2{
+  font-size: 32px;
+  font-family: 'MabryMonoMRegular';
+}
+h3{
+  font-size: 28px;
+  font-family: 'FoundersGroteskLight';
+  color: #474747;
+}
+h4{
+  font-size: 24px;
+  font-family: 'MonumentGrotesk';
+  margin-top: 50px;
+  color: #DB7C0E;
+}
+h5{
+  font-size: 20px;
+  font-family: 'MonumentGrotesk';
+}
+p, li{
+  font-size:20px;
+  font-family: 'FoundersGroteskLight'; 
+  line-height: 30px;
+}
+li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+#titleArea{
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 8%;
+  margin-bottom: 10%;
+}
+
+#usabilityProblems{
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 8%;
+  margin-bottom: 10%;
+}
+#selectedPageContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+}
+#webpageTextArea{
+  width: 40%;
+  min-width: 375px;
+}
+#originalPage{
+  width: 50%;
+  min-width: 350px;
+  height: fit-content;
+}
+
+#brainstorming{
+  display: flex;
+  flex-direction: column;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 8%;
+  margin-bottom: 10%;
+}
+#sketches{
+  display: flex;
+}
+#speedSketches{
+  width: 65%;
+}
+#draft{
+  width:75%;
+}
+
+#wireframing{
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 8%;
+  margin-bottom: 10%;
+}
+#lowfiWires{
+  display:flex;
+  justify-content: space-between;
+  gap:10px;
+}
+
+#lowfiDesktop{
+  width: 81%;
+  height: fit-content;
+}
+#lowfiTablet{
+  width:76%;
+  height: fit-content;
+}
+#lowfiMobile{
+  width:75%;
+  height: fit-content;
+}
+
+#mockups{
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 8%;
+  margin-bottom: 10%;
+}
+
+#conclusion{
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 8%;
+  margin-bottom: 10%;
+}
