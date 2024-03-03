@@ -190,7 +190,7 @@ li:not(:last-child){
   align-items: center;
 }
 .pageImages{
-  width: 55%;
+  width: 50%;
   min-width: 350px;
   height: fit-content;
 }
