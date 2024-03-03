@@ -48,16 +48,15 @@ li:not(:last-child){
 }
 
 #titleArea{
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 8%;
   margin-bottom: 10%;
 }
 
 #usabilityProblems{
-  margin-left: 8%;
-  margin-right: 8%;
-  margin-top: 8%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 10%;
 }
 #selectedPageContainer{
@@ -69,7 +68,11 @@ li:not(:last-child){
 }
 #webpageTextArea{
   width: 40%;
-  min-width: 375px;
+  min-width: 325px;
+}
+#pageLink:hover{
+  color:#991A8C;
+  transition: 0.5s;
 }
 #originalPage{
   width: 50%;
@@ -77,59 +80,179 @@ li:not(:last-child){
   height: fit-content;
 }
 
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:-15%;
+  align-items: center;
+  background-color: white;
+  
+}
+#scrollArrow{
+  margin-top: -10%;
+}
+.carousel-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 44px 0;
+  min-width: 350px;
+  transition: all 0.25s ease-in;
+}
+.item-list{
+  max-width: 550px;
+  width: 50vw;
+  display:flex;
+  padding: 50px 10px;
+  gap: 48px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+.item{
+  width: 100%;
+  scroll-snap-align: center;
+  border-radius:8px;
+}
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+
 #brainstorming{
   display: flex;
   flex-direction: column;
-  margin-left: 8%;
-  margin-right: 8%;
-  margin-top: 8%;
   margin-bottom: 10%;
 }
 #sketches{
   display: flex;
+  flex-wrap: wrap;
+}
+.sketch{
+  width: 50%;
+  min-width: 350px;
 }
 #speedSketches{
   width: 65%;
+  min-width: 325px;
+  max-width: 500px;
 }
 #draft{
   width:75%;
+  min-width: 325px;
+  max-width: 500px;
 }
 
 #wireframing{
-  margin-left: 8%;
-  margin-right: 8%;
-  margin-top: 8%;
   margin-bottom: 10%;
 }
 #lowfiWires{
   display:flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap:10px;
 }
+.lowfiSection{
+  min-width: 300px;
+}
 
 #lowfiDesktop{
-  width: 81%;
+  width: 80%;
+  max-width: 600px;
+  min-width: 300px;
   height: fit-content;
 }
 #lowfiTablet{
-  width:76%;
+  max-width: 300px;
+  min-width: 300px;
   height: fit-content;
 }
 #lowfiMobile{
-  width:75%;
+  max-width: 250px;
+  min-width: 250px;
   height: fit-content;
 }
 
 #mockups{
-  margin-left: 8%;
-  margin-right: 8%;
-  margin-top: 8%;
   margin-bottom: 10%;
+}
+#entirePage{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8%;
+}
+.pageContainer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.pageImages{
+  width: 55%;
+  min-width: 350px;
+  height: fit-content;
+}
+.choiceList{
+  width:40%;
+  min-width: 300px;
+}
+#mockupIntroContainer{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#styleGudieContainer{
+  max-width: 600px;
+}
+#styleGuide{
+  width: 90%;
+  max-width: 600px;
+  min-width: 355px;
+}
+#focusesContainer{
+  width: 120%;
+  max-width: 500px;
+  min-width: 355px;
+}
+#focusList{
+  margin-right: 10%;
+}
+#highfiContainer{
+  display: flex;
+  flex-direction: row;
+  min-width: 350px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#desktopVid{
+  width:80%;
+  min-width: 300px;
+  border-radius: 25px;
+}
+#tabletVid{
+  width: 92%;
+  min-width: 200px;
+  border-radius: 25px;
+}
+#mobileVid{
+  width:65%;
+  min-width: 180px;
+  border-radius: 38px;
+}
+
+#implementation{
+  min-width: 325px;
+  margin-bottom: 10%;
+}
+#deployed:hover{
+  color: #991A8C;
 }
 
 #conclusion{
-  margin-left: 8%;
-  margin-right: 8%;
-  margin-top: 8%;
   margin-bottom: 10%;
+  min-width: 325px;
 }

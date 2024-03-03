@@ -24,42 +24,56 @@
             how I might be able to revise the existing interface.</p>
           <p>Note: the webpage was recently redesigned, but the original version that I redesigned can be found 
           <a href="https://web.archive.org/web/20231231112303/https://www.thegrandadventure.org/" target="_blank" 
-          style="color: #DB7C0E;"><u>here</u></a>.</p>
+          style="color: #DB7C0E;"><u id="pageLink">here</u></a>.</p>
         </div>
-        <img id="originalPage" alt="original homepage of the website" src="assets/original_page.png">
-      </div>
+        <div class="slideshow-container">
+          <div class="carosel-view">
+            <div id="item-list" class="item-list">
+              <img id="item1" class="item" src="assets/original_page.png">
+              <img id="item2" class="item" src="assets/page2.png">
+              <img id="item3" class="item" src="assets/page3.png">
+              <img id="item4" class="item" src="assets/page4.png">
+            </div>
+          </div>
+          <img id="scrollArrow" alt="" src="assets/scroll_arrow.png">
+
+          
+        <!-- <img id="originalPage" alt="original homepage of the website" src="assets/original_page.png"> -->
+        </div>
       <h4>Analyzing Usability Problems:</h4>
       <p>The webpage is not overly complex, but there are obstructions to efficiently navigating the page. The purpose of this 
         website is to provide information to a user about the goals and purpose of this organization and its programs, but it 
         is difficult to figure out exactly what this organization does from the homepage based on the existing conceptual model, 
         which is very unstructured and does not strongly communicate to a user how it works.</p>
-      <h5>Learnability</h5>
-      <ul>
-        <li>
-          Text describing the goal of the organization is on the page, but there is not a clear flow, hierarchy, or subdivisions 
-          when scrolling down the page, making it challenging for first time users to navigate.
-        </li>
-        <li>
-          When trying to learn about the organization and use this site, a user likely has to scroll all the way down the page 
-          and go to other pages in order to piece together the information they are looking for.
-        </li>
-        <li>Text should be clearer, more descriptive, and more directly related to its designated section of the page</li>
-        <li>Links could be more communicative to the user if visually responsive using color change on hover</li>
-      </ul>
-      <h5>Efficiency</h5>
-      <ul>
-        <li>The images distract from the information on the page and don’t directly relate to the surrounding text.</li>
-        <li>Much of the informative text is too small; not given enough emphasis through typography; uses inconsistent 
-          fonts throughout. This (along with the lack of subdivisions) makes page navigation inefficient.</li>
-        <li>The majority of the webpage is not very reflective of the organization itself or its identity (e.g. through 
-          color, typography, branding)</li>
-      </ul>
-      <h5>Memorability</h5>
-      <ul>
-        <li>Beyond the images from the organization program itself, there is nothing distinguishable or memorable about 
-          the site that relates to the organization</li>
-          <li>Lacks cohesion (for instance, there is no consistent use of color or font)</li>
-      </ul>
+      <div id="usabilityAnalysis">
+        <h5>Learnability</h5>
+        <ul>
+          <li>
+            Text describing the goal of the organization is on the page, but there is not a clear flow, hierarchy, or subdivisions 
+            when scrolling down the page, making it challenging for first time users to navigate.
+          </li>
+          <li>
+            When trying to learn about the organization and use this site, a user likely has to scroll all the way down the page 
+            and go to other pages in order to piece together the information they are looking for.
+          </li>
+          <li>Text should be clearer, more descriptive, and more directly related to its designated section of the page</li>
+          <li>Links could be more communicative to the user if visually responsive using color change on hover</li>
+        </ul>
+        <h5>Efficiency</h5>
+        <ul>
+          <li>The images distract from the information on the page and don’t directly relate to the surrounding text.</li>
+          <li>Much of the informative text is too small; not given enough emphasis through typography; uses inconsistent 
+            fonts throughout. This (along with the lack of subdivisions) makes page navigation inefficient.</li>
+          <li>The majority of the webpage is not very reflective of the organization itself or its identity (e.g. through 
+            color, typography, branding)</li>
+        </ul>
+        <h5>Memorability</h5>
+        <ul>
+          <li>Beyond the images from the organization program itself, there is nothing distinguishable or memorable about 
+            the site that relates to the organization</li>
+            <li>Lacks cohesion (for instance, there is no consistent use of color or font)</li>
+        </ul>
+      </div>
       <h4>Accessibility:</h4>
       <p>Using WebAIM WAVE, various contrast errors were indicated in regards to the text and background colors. 
         Additionally, there are errors regarding certain HTML classifications and alternative text labeling. I 
@@ -103,11 +117,107 @@
 
     <div id="mockups">
       <h2>High-Fidelity Mockups</h2>
+      <div id="mockupIntroContainer">
+        <div id="styleGuideContainer">
+          <h4>Style Guide</h4>
+          <img id="styleGuide" src="assets/style_guide.png">
+        </div>
+        <div id="focusesContainer">
+          <h4>Final design focuses:</h4>
+          <ul id="focusList">
+            <li>Create clearly defined and legible sections of the page </li>
+            <li>Follow a consistent pattern and structure</li>
+            <li>Make buttons responsive to users through color change on hover</li>
+            <li>Make the page responsive for different screen sizes and devices</li>
+            <li>Clearly portray the organization’s purpose and goals as well as their personality through color, 
+              images, and text</li>
+          </ul>
+        </div>
+      </div>
+      <div id="designDecisions">
+        <h4>Design Decisions</h4>
+        <div id="entirePage">
+          <div class="pageContainer" id="mainContainer">
+            <img class="pageImages" id="mainPage" src="assets/main_page.png">
+            <ul class="choiceList">
+              <li>Larger and more prominent navigation bar with responsive buttons</li>
+              <li>Title text given dark outline/shadow to define it against the background</li>
+              <li>Consistent cont choices cooresponding to the text's purpose and heading level</li>
+            </ul>
+          </div>
+          <div class="pageContainer" id="offerContainer">
+            <img class="pageImages" id="whatWeOffer" src="assets/what_we_offer.png">
+            <ul class="choiceList">
+              <li>Clearly defined page subdivisions with headers describing their content and function</li>
+              <li>The organization's programs are clearly emphasized, each given a defined section and description</li>
+            </ul>
+          </div>
+          <div class="pageContainer" id="uniqueContainer">
+            <img class="pageImages" id="uniqueInvolved" src="assets/unique_involved.png">
+            <ul class="choiceList">
+              <li>New section added to feature the organization’s goals, features, and values</li>
+              <li>Distinct area to donate to the organization and sign up</li>
+            </ul>
+          </div>
+          <div class="pageContainer" id="footerContainer">
+            <img class="pageImages" id="footer" src="assets/footer.png">
+            <ul class="choiceList">
+              <li>Simple footer with contact information</li>
+              <li>Illustration to reflect the location and give the site personality reflective of the organization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h3>Responsive Variations:</h3>
+      <h3>Below are the prototype mockups that I created for each screen size using Figma.</h3>
+      <div id="highfiContainer">
+        <div id="desktopContainer">
+          <h4>Desktop Version</h4>
+          <img id="desktopVid" alt="responsive prototype of the desktop interface" src="assets/desktop.gif">
+        </div>
+        <div id="tabletContainer">
+          <h4>Tablet Version</h4>
+          <img id="tabletVid" alt="responsive prototype of the tablet interface" src="assets/tablet.gif">
+        </div>
+        <div id="mobileContainer">
+          <h4>Mobile Version</h4>
+          <img id="mobileVid" alt="responsive prototype of the mobile interface" src="assets/mobile.gif">
+        </div>
+      </div>
+
+    </div>
+
+    <div id="implementation">
+      <h2>Implementation</h2>
+      <h3>Using HTML and CSS, I implemented the high-fidelity prototypes.<br>
+      The deployed webpage can be viewed <a href="https://alexhogue.github.io/responsive-redesign/" 
+      target="_blank" style="color: #DB7C0E;"><u id="deployed">here</u></a>.</h3>
+      <p>The implemented page was tested at various screen sizes for responsiveness. Additionally, I tested the 
+        page’s accessibility using WebAIM WAVE. The page passed all of the accessibility checks besides two text 
+        contrast issues. However, I added additional features to aid in contrast such as adding a shadow behind 
+        the title text and darkening the background image, and I ensured that the contrast of these areas was sufficient 
+        using black and white filters as well as color blind filters.</p>
 
     </div>
 
     <div id="conclusion">
       <h2>Reflections</h2>
+      <p>This responsive redesign not only addressed the identified usability issues but also embraced accessibility and visual 
+        coherence. The final product reflects a commitment to delivering a user-centric experience, ensuring that individuals can 
+        easily engage with the organization's mission and programs. The process of redesigning The Grand Adventure's webpage was 
+        an enriching exploration into the intersection of design, healthcare, and accessibility. My goal was to
+        not only create an aesthetically pleasing interface but to significantly enhance the user experience, making 
+        information easily accessible to a diverse audience.</p>
+      <p>By addressing usability problems related to learnability, efficiency, and memorability, the redesign aimed to create a 
+        more intuitive and engaging interface. The information architecture was restructured to provide a clearer flow and hierarchy, 
+        allowing users to navigate effortlessly. Descriptive and well-organized text, paired with visually responsive links, 
+        contributes to a more streamlined and efficient user experience. Efforts were made to enhance memorability by creating a 
+        cohesive visual identity that not only reflects the organization's identity but also contributes to a more memorable and 
+        immersive experience for users.</p>
+      <p>Accessibility was prioritized, with the implementation of high-contrast text and appropriate labeling for screen readers, 
+        ensuring that the webpage is accessible to a broad audience. The implementation phase then brought the high-fidelity 
+        mockups to life, using HTML and CSS to create a responsive design that adapts seamlessly to different screen sizes and 
+        devices.</p>
 
     </div>
 
