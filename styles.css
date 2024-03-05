@@ -152,21 +152,25 @@ li:not(:last-child){
 #lowfiWires{
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap:10px;
+  justify-content: flex-start;
+  gap:15%;
 }
 .lowfiSection{
   min-width: 300px;
 }
+#lowfiDesktopContainer{
+  display: flex;
+  flex-direction: column;
+}
 
 #lowfiDesktop{
-  width: 80%;
+  width: 85%;
   max-width: 600px;
   min-width: 300px;
   height: fit-content;
 }
 #lowfiTablet{
-  max-width: 300px;
+  max-width: 325px;
   min-width: 300px;
   height: fit-content;
 }
