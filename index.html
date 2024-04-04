@@ -2,219 +2,205 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Grand Adventure Responsive Redesign</title>
+    <title>Voyage Vault Portfolio Page</title>
     <link rel="stylesheet" href="styles.css" /> 
   </head>
   <body>
     <div id="titleArea">
-        <h1>Responsive Redesign</h1>
-        <h2>The Grand Adventure</h2>
-        <h3>Goal: to redesign the UI of an existing webpage with a focus on 
-        accessibility and responsiveness</h3>
+        <h1>Voyage Vault</h1>
+        <h2>Create your dream travel bucket list!</h2>
+        <hr>
     </div>
 
-    <div id="usabilityProblems">
-      <h2>Analyzing Usability of the Original Page</h2>
-      <h4>Selected Webpage:</h4>
-      <div id="selectedPageContainer">
-        <div id="webpageTextArea">
-          <p>I redesigned the webpage for a non-profit organization called <b>The Grand Adventure</b>, which provides programming 
-            for pediatric and adult cancer survivors. I chose this website because I am interested in the intersection between
-            design and the healthcare industry, and since this organization is a small non-profit, I was interested in seeing 
-            how I might be able to revise the existing interface.</p>
-          <p>Note: the webpage was recently redesigned, but the original version that I redesigned can be found 
-          <a href="https://web.archive.org/web/20231231112303/https://www.thegrandadventure.org/" target="_blank" 
-          style="color: #DB7C0E;"><u id="pageLink">here</u></a>.</p>
+    <div id="overview">
+      <h2>Overview</h2>
+      <div id="overviewContent">
+        <div>
+          <p>The goal of the project was to design and build an interface for users to create their dream travel bucket list, share 
+            their travel experiences, and explore others' travel opinions.</p>
+          <p>The final product is a fully functional interactive interface that displays travel destinations to users, allows them to 
+            sort and filter the options, and add their favorites to their "vault" which functions as an aggregator to display users' 
+            selections "vault".</p>
         </div>
-        <div class="slideshow-container">
-          <div class="carosel-view">
-            <div id="item-list" class="item-list">
-              <img id="item1" class="item" src="assets/original_page.png">
-              <img id="item2" class="item" src="assets/page2.png">
-              <img id="item3" class="item" src="assets/page3.png">
-              <img id="item4" class="item" src="assets/page4.png">
+        <div id="tools">
+          <h3>Tools:</h3>
+          <p>Figma, ReactJS, Procreate</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="partOne">
+      <h2>Preperation</h2>
+      <p>I began the design process by analyzing and drawing comparisons between various existing interfaces that implement a favoriting
+        feature in order to figure out the clearest and most effective way to implement my travel bucket list builder.
+      </p>
+        <div id="competitiveAnalysis">
+          <h3>Competitive Analysis</h3>
+          <p>Below is a competitive comparison chart used to analyse the features of 3 interfaces with favoriting functions: Goodreads, Netflix, 
+            and TripAdvisor.</p>
+
+          <table>
+            <tr>
+              <th> </th>
+              <th><a href="https://www.goodreads.com/choiceawards/best-fiction-books-2023" target=”_blank”><b>Goodreads</b></a></th>
+              <th><a href="https://www.netflix.com/browse" target=”_blank”><b>Netflix</b></a></th>
+              <th><a href="https://www.tripadvisor.com/Hotels" target=”_blank”><b>TripAdvisor</b></a></th>
+            </tr>
+            <tr>
+              <td><b>Favorite options</b></td>
+              <td>4 options: Rating scale: 1-5; Read; currently reading; and want to read</td>
+              <td>3 options: Like, love, dislike</td>
+              <td>1 option: Only like</td>
+            </tr>
+            <tr>
+              <td><b>Filter customizability</b></td>
+              <td>Y (by genre)</td>
+              <td>Y (by genre)</td>
+              <td>Y (by purpose)</td>
+            </tr>
+            <tr>
+              <td><b>Options displayed on home</b></td>
+              <td>X (must click to view options)</td>
+              <td>Y (scroll by category; clicking not necessary)</td>
+              <td>Y</td>
+            </tr>
+            <tr>
+              <td><b>Favorite action clarity</b></td>
+              <td>X (wordy; too many options to click)</td>
+              <td>X (requires hover to appear)</td>
+              <td>Y (heart icon) </td>
+            </tr>
+            <tr>
+              <td><b>Unfavorite clarity</b></td>
+              <td>X</td>
+              <td>Y</td>
+              <td>X (doesn’t unclick automatically; opens pop-up in order to do so)</td>
+            </tr>
+            <tr>
+              <td><b>Reward/ feedback</b></td>
+              <td>Y</td>
+              <td>Y</td>
+              <td>Y (color and icon very clear)</td>
+            </tr>
+            <tr>
+              <td><b>Favorite list display</b></td>
+              <td>Y (however not visually appealing)</td>
+              <td>N (no clear hierarchy)</td>
+              <td>Y</td>
+            </tr>
+          </table>
+
+          <div id="summary">
+            <div id="summarySec1">
+              <h3>Importance of visual layout</h3>
+              <p>Based on the Competitive Comparison chart, it is clearly important that a favorite function be intuitive and clear to 
+                users. This includes how the items are displayed visually on the interface. The aspects that were most successful between these 
+                three interfaces include displaying many options to the user directly on the main page so that a user can scroll through the options 
+                without having to click to other pages. Netflix and TripAdvisor do this, whereas Goodreads requires a user to click on a genre 
+                before viewing all options. Forcing users to make choices can be less effective than letting them browse freely. All three sites employ a 
+                similar visual structure that works effectively; a grided layout of options creates visual hierarchy and use of repeated 
+                forms that clearly communicate their function and orient the user on the page. </p>
+            </div>
+            <div id="summarySec2">
+              <h3>Importance of intuitive flow</h3>
+              <p>Making the favorite action intuitive is equally important; TripAdvisor uses a simple heart icon, whereas Netflix 
+                requires hover for the like option to appear, and Goodreads has numerous like/save/rating options that may be too 
+                wordy and confusing for a user. Additionally, clear “unliking” is important to allow users flexibility to modify their 
+                lists or rectify errors; Netflix does this very clearly by simply allowing users to click the like button again to 
+                unlike it, whereas Goodreads and TripAdvisor require additional steps. All three sites provided the user with effective 
+                feedback when liking items to communicate a user’s completed and successful action. </p>
             </div>
           </div>
-          <img id="scrollArrow" alt="" src="assets/scroll_arrow.png">
-
-          
-        <!-- <img id="originalPage" alt="original homepage of the website" src="assets/original_page.png"> -->
-        </div>
-      <h4>Analyzing Usability Problems:</h4>
-      <p>The webpage is not overly complex, but there are obstructions to efficiently navigating the page. The purpose of this 
-        website is to provide information to a user about the goals and purpose of this organization and its programs, but it 
-        is difficult to figure out exactly what this organization does from the homepage based on the existing conceptual model, 
-        which is very unstructured and does not strongly communicate to a user how it works.</p>
-      <div id="usabilityAnalysis">
-        <h5>Learnability</h5>
-        <ul>
-          <li>
-            Text describing the goal of the organization is on the page, but there is not a clear flow, hierarchy, or subdivisions 
-            when scrolling down the page, making it challenging for first time users to navigate.
-          </li>
-          <li>
-            When trying to learn about the organization and use this site, a user likely has to scroll all the way down the page 
-            and go to other pages in order to piece together the information they are looking for.
-          </li>
-          <li>Text should be clearer, more descriptive, and more directly related to its designated section of the page</li>
-          <li>Links could be more communicative to the user if visually responsive using color change on hover</li>
-        </ul>
-        <h5>Efficiency</h5>
-        <ul>
-          <li>The images distract from the information on the page and don’t directly relate to the surrounding text.</li>
-          <li>Much of the informative text is too small; not given enough emphasis through typography; uses inconsistent 
-            fonts throughout. This (along with the lack of subdivisions) makes page navigation inefficient.</li>
-          <li>The majority of the webpage is not very reflective of the organization itself or its identity (e.g. through 
-            color, typography, branding)</li>
-        </ul>
-        <h5>Memorability</h5>
-        <ul>
-          <li>Beyond the images from the organization program itself, there is nothing distinguishable or memorable about 
-            the site that relates to the organization</li>
-            <li>Lacks cohesion (for instance, there is no consistent use of color or font)</li>
-        </ul>
-      </div>
-      <h4>Accessibility:</h4>
-      <p>Using WebAIM WAVE, various contrast errors were indicated in regards to the text and background colors. 
-        Additionally, there are errors regarding certain HTML classifications and alternative text labeling. I 
-        agree that the low contrast of the text does result in some areas being more difficult to read and that 
-        revised alt-text labeling would help boost this webpage’s usability.</p>
-    </div>
-
-    <div id="brainstorming">
-      <h2>Initial Brainstorming</h2>
-      <div id="sketches">
-        <div class="sketch">
-          <h4>Speed Sketches</h4>
-          <p>(One minute per sketch)</p>
-          <img id="speedSketches" alt="nine speed sketches of the homepage" src="assets/quick_sketches.png">
-        </div>
-        <div class="sketch">
-          <h4>Initial Draft</h4>
-          <img id="draft" alt="sketched draft of the homepage" src="assets/rough_draft.png">
-        </div>
-      </div>
-    </div>
-
-    <div id="wireframing"> 
-      <h2>Low-Fidelity Wireframes</h2>
-        <div class="lowfiSection" id="lowfiDesktopContainer">
-          <h4>Desktop Version</h4>
-          <img id="lowfiDesktop" src="assets/lowfi_desktop.png">
-        </div>
-      <div id="lowfiWires">
-        <div class="lowfiSection">
-          <h4>Tablet Version</h4>
-          <img id="lowfiTablet" src="assets/lowfi_tablet.png">
-        </div>
-        <div class="lowfiSection">
-          <h4>Mobile Version</h4>
-          <img id="lowfiMobile" src="assets/lowfi_mobile.png">
-        </div>
-      </div>
-
-    </div>
-
-    <div id="mockups">
-      <h2>High-Fidelity Mockups</h2>
-      <div id="mockupIntroContainer">
-        <div id="styleGuideContainer">
-          <h4>Style Guide</h4>
-          <img id="styleGuide" src="assets/style_guide.png">
-        </div>
-        <div id="focusesContainer">
-          <h4>Design focuses:</h4>
-          <ul id="focusList">
-            <li>Create clearly defined and legible sections of the page </li>
-            <li>Follow a consistent pattern and structure</li>
-            <li>Make buttons responsive to users through color change on hover</li>
-            <li>Clearly portray the organization’s purpose and goals as well as their personality through color, 
-              images, and text</li>
-            <li>Make the page responsive for different screen sizes and devices</li>
-          </ul>
-        </div>
-      </div>
-      <div id="designDecisions">
-        <h4>Design Decisions</h4>
-        <div id="entirePage">
-          <div class="pageContainer" id="mainContainer">
-            <img class="pageImages" id="mainPage" src="assets/main_page.png">
-            <ul class="choiceList">
-              <li>Larger and more prominent navigation bar with responsive buttons</li>
-              <li>Title text given dark outline/shadow to define it against the background</li>
-              <li>Consistent cont choices cooresponding to the text's purpose and heading level</li>
-            </ul>
-          </div>
-          <div class="pageContainer" id="offerContainer">
-            <img class="pageImages" id="whatWeOffer" src="assets/what_we_offer.png">
-            <ul class="choiceList">
-              <li>Clearly defined page subdivisions with headers describing their content and function</li>
-              <li>The organization's programs are clearly emphasized, each given a defined section and description</li>
-            </ul>
-          </div>
-          <div class="pageContainer" id="uniqueContainer">
-            <img class="pageImages" id="uniqueInvolved" src="assets/unique_involved.png">
-            <ul class="choiceList">
-              <li>New section added to feature the organization’s goals, features, and values</li>
-              <li>Distinct area to donate to the organization and sign up</li>
-            </ul>
-          </div>
-          <div class="pageContainer" id="footerContainer">
-            <img class="pageImages" id="footer" src="assets/footer.png">
-            <ul class="choiceList">
-              <li>Simple footer with contact information</li>
-              <li>Illustration to reflect the location and give the site personality reflective of the organization</li>
-            </ul>
+          <br>
+          <div id="plans">
+            <p>Based on my analysis, it is important to implement the following factors in my own design to optimize the user 
+              experience with the interface:</p>
+            <ul>
+              <li>Clear layout with all options viewable on the home page</li>
+              <li>Allow sorting by category</li>
+              <li>Limit excess wordiness</li>
+              <li>Use clear icons for liking items without extra clicks needed</li>
+              <li>Easy removal of items once added</li>
+            </uL>
           </div>
         </div>
-      </div>
-      <h3>Responsive Variations:</h3>
-      <h3>Below are the prototype mockups that I created for each screen size using Figma.</h3>
-      <div id="highfiContainer">
-        <div id="desktopContainer">
-          <h4>Desktop Version</h4>
-          <img id="desktopVid" alt="responsive prototype of the desktop interface" src="assets/desktop.gif">
-        </div>
-        <div id="tabletContainer">
-          <h4>Tablet Version</h4>
-          <img id="tabletVid" alt="responsive prototype of the tablet interface" src="assets/tablet.gif">
-        </div>
-        <div id="mobileContainer">
-          <h4>Mobile Version</h4>
-          <img id="mobileVid" alt="responsive prototype of the mobile interface" src="assets/mobile.gif">
-        </div>
-      </div>
-
     </div>
 
-    <div id="implementation">
-      <h2>Implementation</h2>
-      <h3>Using HTML and CSS, I implemented the high-fidelity prototypes.<br>
-      The deployed webpage can be viewed <a href="https://alexhogue.github.io/responsive-redesign/" 
-      target="_blank" style="color: #DB7C0E;"><u id="deployed">here</u></a>.</h3>
-      <p>The implemented page was tested at various screen sizes for responsiveness. Additionally, I tested the 
-        page’s accessibility using WebAIM WAVE. The page passed all of the accessibility checks besides one contrast error 
-        regarding the title contrast against the background image. However, I added additional features to aid in the
-        contrast such as adding a dark shadow behind the title text and darkening the background image. I also ensured that the 
-        contrast of this area was sufficient by testing it with black and white filters as well as color blind filters.</p>
+    <div id="partTwo">
+      <h2>Design</h2>
+        <div id="planning" >
+          <h3>Planning</h3>
+          <p>I began by planning out my design using Figma with a focus on clarity and accessibility.</p>
+          <p>Using the information gleaned from my competitive comparison, I took the elements from the three interfaces
+            that were most effective, and revised elements that were less effective.</p>
+        </div>
+        <div id="analysis">
+          <h3>Design Choices</h3>
+          <img id="pageAnalysis" src="assets/page_analysis.png"/>
+          <div id="purposeWriting">
+            <div id="choices">
+            <h4><b>Layout</b></h4>
+            <p>The purpose of the app is to provide users with travel destination ideas and allow them to build their travel bucket 
+              list and view other users opinions and rankings. It is that the travel information for each destination be
+              clearly layed out into item cards for users to easily browse.</p>
+            </div>
+            <div id="choices">
+              <h4><b>Sort and Filter</b></h4>
+              <p>Because travel is incredibly distinct to each individual's 
+              preferences, sorting and filtering the options is extremely useful. I created the options for users to sort by most liked destinations 
+              and filter destinations by both continent as well as desired activity (e.g city, beach, and adventure focused destinations).</p>
+            </div>
+            <div id="choices">
+              <h4><b>Aggregator</b></h4>
+              <p>The user is then able to add their favorite destinations to their travel vault. The vault is the aggregator that displays the users choices 
+              in a section to the left of the travel grid so that users can easily view and update their list as they browse.</p>
+            </div>
+          </div>
+        </div>
+        <div id="imageSection">
+          <div id="imageExamples">
+            <div id="writingSec">
+              <h3>Illustrations</h3>
+              <p id="imageWriting">Additionally, I created colorful illustrations to make the page more visually engaging and to capture the excitment 
+              and discovery of travel.</p>
+            </div>
+            <img id="plane" src="assets/plane.png"/>
+            <div id="placeImages">
+              <img id="kruger" src="assets/kruger.png"/>
+              <img id="iceland" src="assets/iceland.png"/>
+              <img id="grand" src="assets/grand_canyon.png"/>
+              <img id="london" src="assets/london.png"/>
+            </div>
+          </div>
+        </div>
+        <div id="functionality">
+          <h2>Implementation</h2>
+          <div id="implementationSec">
+            <div>
+              <p>After completing the design process, I implemented the webpage as an interactive interface with React.js.</p>
+              <p id="link">Here is the link to the <a id="pageLink" href="https://voyage-vault.vercel.app/" target=”_blank”><b>deployed webpage</b></a>.</p>
+            </div>
+            <img id="gif" alt="user interacting with the interface" src="assets/interface.gif"/>
+          </div>
+        </div>
     </div>
 
     <div id="conclusion">
-      <h2>Key Takeaways</h2>
-      <p>This redesign process highlights the importance of addressing usability issues in design while prioritizing accessibility and visual 
-        coherence. Restructuring the information architecture of the original page provided a clearer flow and hierarchy, and descriptive 
-        and well-organized text, paired with visually responsive buttons, contributes to a more efficient user experience. I also 
-        made an effort to enhance memorability by creating a cohesive visual identity that not only reflects the organization's 
-        identity but also contributes to a more immersive experience for users. Accessibility was emphasized with the 
-        implementation of high-contrast text and appropriate labeling for screen readers, ensuring that the webpage is accessible 
-        to a broad audience. The implementation phase then brought the mockups to life to create a responsive webpage that adapts 
-        seamlessly to different screen sizes and devices.</p>
-        <p>My goal was to not only create an aesthetically pleasing interface but to significantly enhance the user 
-        experience, making information easily accessible to a diverse audience and ensuring that individuals can easily engage 
-        with the organization's mission and programs. The process of redesigning the webpage was a valuable exploration into 
-        the intersection of design, healthcare, and accessibility.</p>
-
+      <h2>Reflections</h2>
+      <p>With this project, I learned a lot about designing and building an intuitive and functional interactive interface. I 
+        refined my skills in programming with React to implement my UI design after completing the UI/UX research and design process. I
+        also learned about the considerations and intericacies that go into building an interface at both a the design stage
+        as well as the implementation stage; both require clear planning in order to figure out the best way to acheive the project's
+        goal. I look forward to continuing to develop my design and front-end programming skills. </p>
+      <div id="takeaways">
+        <h3>Key Takeaways</h3>
+        <p><b>Clear and Accessible Layout:</b> Providing a clear layout with all options readily viewable enhances usability and allows users to 
+          easily navigate and interact with the interface.</p>
+        <p><b>Simplified Interaction:</b> Using clear icons and limiting excess wordiness helps streamline user interactions and reduces 
+          cognitive load, resulting in a more efficient and enjoyable user experience.</p>
+        <p><b>Flexibility and Feedback:</b> Offering options for sorting, favoriting, and removing items, along with clear feedback 
+          mechanisms, empowers users to customize their experience and provides valuable feedback on their actions.</p>
+      </div>
     </div>
   </body>
-
   </html>

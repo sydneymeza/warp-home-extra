@@ -3,260 +3,173 @@
   src: url('typefaces/BasisGrotesquePro-Light 2.otf'); 
 }
 @font-face {
-  font-family: 'MabryMonoMRegular'; 
-  src: url('typefaces/MabryMonoPro-Regular.ttf'); 
+  font-family: 'GT'; 
+  src: url('typefaces/GT-Walsheim-Pro-Light.otf'); 
 }
 @font-face {
   font-family: 'MonumentGrotesk'; 
   src: url('typefaces/monument-grotesk-regular.otf'); 
 }
 @font-face {
-  font-family: 'FoundersGroteskLight'; 
-  src: url('typefaces/FoundersGrotesk-Light.otf'); 
+  font-family: 'GoodSans'; 
+  src: url('typefaces/GoodSans-Thin.otf'); 
+}
+@font-face {
+  font-family: 'Plaak'; 
+  src: url('typefaces/Plaak-25Light.otf'); 
 }
 
 h1{
-  font-size: 48px;
-  font-family: 'BasisGrotesk';
+  font-size: 44px;
+  font-family: 'GT';
 }
 h2{
-  font-size: 32px;
-  font-family: 'MabryMonoMRegular';
+  font-size: 24px;
+  font-family: "GoodSans";
+  color: #474747;
 }
 h3{
-  font-size: 28px;
-  font-family: 'FoundersGroteskLight';
+  font-size: 22px;
+  font-family: 'Plaak';
+  min-width: 150px;
   color: #474747;
 }
 h4{
-  font-size: 24px;
-  font-family: 'MonumentGrotesk';
-  margin-top: 50px;
-  color: #DB7C0E;
+  font-size: 18px;
+  font-family: 'BasisGrotesk';
+  min-width: 150px;
+  color: #474747;
 }
 h5{
   font-size: 20px;
   font-family: 'MonumentGrotesk';
 }
-p, li{
-  font-size:20px;
-  font-family: 'FoundersGroteskLight'; 
+p, li, th{
+  font-size:18px;
+  font-family: 'BasisGrotesk'; 
   line-height: 30px;
 }
 li:not(:last-child){
   margin-bottom: 10px;
 }
+th{
+  height: 55px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+td {
+  font-size:16px;
+  font-family: 'BasisGrotesk';
+  max-width: 200px;
+  padding: 1%;
+}
+table, td, th {
+  border: 1px solid;
+  border-color: #c8c8c8;
+}
+table {
+  width: 90%;
+  border: 1px solid;
+  border-collapse: collapse;
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+ul {
+  width: 60%;
+}
 
 #titleArea{
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 12%;
+  margin-right: 12%;
   margin-top: 8%;
-  margin-bottom: 10%;
+  /* margin-bottom: 8%; */
 }
-
-#usabilityProblems{
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 10%;
+#overview{
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
-#selectedPageContainer{
+#overviewContent{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   gap: 5%;
 }
-#webpageTextArea{
-  width: 40%;
-  min-width: 325px;
+#tools{
+  min-width: 200px;
 }
-#pageLink:hover{
-  color:#991A8C;
-  transition: 0.5s;
+#partOne, #partTwo {
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-bottom: 4%;
 }
-#originalPage{
-  width: 50%;
-  min-width: 350px;
-  height: fit-content;
-}
-
-.slideshow-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap:-15%;
-  align-items: center;
-  background-color: white;
-  
-}
-#scrollArrow{
-  margin-top: -10%;
-}
-.carousel-view {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  padding: 44px 0;
-  min-width: 350px;
-  transition: all 0.25s ease-in;
-}
-.item-list{
-  max-width: 550px;
-  width: 50vw;
+#summarySec1, #summarySec2{
   display:flex;
-  padding: 50px 10px;
-  gap: 48px;
-  scroll-behavior: smooth;
-  transition: all 0.25s ease-in;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
+  gap: 5%;
 }
-.item{
-  width: 100%;
-  scroll-snap-align: center;
-  border-radius:8px;
-}
-.item-list::-webkit-scrollbar {
-  display: none;
-}
-
-
-#brainstorming{
+#choices {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 10%;
+  gap: 5%;
 }
-#sketches{
-  display: flex;
-  flex-wrap: wrap;
-}
-.sketch{
-  width: 50%;
-  min-width: 350px;
-}
-#speedSketches{
-  width: 65%;
-  min-width: 325px;
-  max-width: 500px;
-}
-#draft{
-  width:75%;
-  min-width: 325px;
-  max-width: 500px;
-}
-
-#wireframing{
-  margin-bottom: 10%;
-}
-#lowfiWires{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap:15%;
-}
-.lowfiSection{
-  min-width: 300px;
-}
-#lowfiDesktopContainer{
-  display: flex;
-  flex-direction: column;
-}
-
-#lowfiDesktop{
+#planning{
   width: 85%;
-  max-width: 600px;
-  min-width: 300px;
-  height: fit-content;
 }
-#lowfiTablet{
-  max-width: 325px;
-  min-width: 300px;
-  height: fit-content;
-}
-#lowfiMobile{
-  max-width: 250px;
-  min-width: 250px;
-  height: fit-content;
-}
-
-#mockups{
-  margin-bottom: 10%;
-}
-#entirePage{
-  display: flex;
-  flex-direction: column;
+#functionality, #takeaways, #planning, #analysis, #imageSection{
+  margin-top: 4%;
   margin-bottom: 8%;
 }
-.pageContainer{
+#pageAnalysis{
+  width: 100%;
+  margin-bottom: 5%;
+}
+#imageExamples{
   display: flex;
-  flex-wrap: wrap;
+  gap: 1%;
   align-items: center;
-}
-.pageImages{
-  width: 50%;
-  min-width: 350px;
-  height: fit-content;
-}
-.choiceList{
-  width:40%;
-  min-width: 300px;
-}
-#mockupIntroContainer{
-  display:flex;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
+  padding:2%;
 }
-#styleGudieContainer{
-  max-width: 600px;
+#imageWriting{
+  min-width: 250px;
 }
-#styleGuide{
-  width: 90%;
-  max-width: 600px;
-  min-width: 355px;
+#plane{
+  width:30%;
 }
-#focusesContainer{
-  width: 120%;
-  max-width: 500px;
-  min-width: 355px;
-}
-#focusList{
-  margin-right: 10%;
-}
-#highfiContainer{
+#placeImages{
   display: flex;
-  flex-direction: row;
-  min-width: 350px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2%;
 }
-#desktopVid{
-  width:80%;
-  min-width: 300px;
-  border-radius: 25px;
+#kruger, #london, #grand, #iceland{
+  width:40%;
+  margin-bottom: 2%;
+  border-radius: 10px;
 }
-#tabletVid{
-  width: 92%;
-  min-width: 200px;
-  border-radius: 25px;
+#implementationSec{
+  display: flex;
+  gap: 5%;
 }
-#mobileVid{
-  width:65%;
-  min-width: 180px;
-  border-radius: 38px;
+#gif{
+  width:60%
 }
+a:link{
+  color: #313131;
+  text-decoration: none;
 
-#implementation{
-  min-width: 325px;
-  margin-bottom: 10%;
 }
-#deployed:hover{
-  color: #991A8C;
+a:hover{
+  color: #E7436D;
+  text-decoration: underline;
+}
+#competitiveAnalysis{
+  padding: 6%;
 }
 
 #conclusion{
-  margin-bottom: 10%;
+  margin-bottom: 12%;
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-top: 8%;
   min-width: 325px;
 }
