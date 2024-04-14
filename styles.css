@@ -52,29 +52,6 @@ p, li, th{
 li:not(:last-child){
   margin-bottom: 10px;
 }
-th{
-  height: 55px;
-  text-align: center;
-  background-color: #f5f5f5;
-}
-
-td {
-  font-size:16px;
-  font-family: 'BasisGrotesk';
-  max-width: 200px;
-  padding: 1%;
-}
-table, td, th {
-  border: 1px solid;
-  border-color: #c8c8c8;
-}
-table {
-  width: 90%;
-  border: 1px solid;
-  border-collapse: collapse;
-  margin-bottom: 5%;
-  margin-top: 2%;
-}
 ul {
   width: 60%;
 }
@@ -91,68 +68,8 @@ ul {
   margin-top: 4%;
   margin-bottom: 4%;
 }
-#overviewContent{
-  display: flex;
-  gap: 5%;
-}
-#tools{
-  min-width: 200px;
-}
-#partOne, #partTwo {
-  margin-left: 12%;
-  margin-right: 12%;
-  margin-bottom: 4%;
-}
-#summarySec1, #summarySec2{
-  display:flex;
-  gap: 5%;
-}
-#choices {
-  display: flex;
-  gap: 5%;
-}
-#planning{
-  width: 85%;
-}
-#functionality, #takeaways, #planning, #analysis, #imageSection{
-  margin-top: 4%;
-  margin-bottom: 8%;
-}
-#pageAnalysis{
-  width: 100%;
-  margin-bottom: 5%;
-}
-#imageExamples{
-  display: flex;
-  gap: 1%;
-  align-items: center;
-  justify-content: space-between;
-  padding:2%;
-}
-#imageWriting{
-  min-width: 250px;
-}
-#plane{
-  width:30%;
-}
-#placeImages{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2%;
-}
-#kruger, #london, #grand, #iceland{
-  width:40%;
-  margin-bottom: 2%;
-  border-radius: 10px;
-}
-#implementationSec{
-  display: flex;
-  gap: 5%;
-}
-#gif{
-  width:60%
-}
+
+
 a:link{
   color: #313131;
   text-decoration: none;
@@ -161,9 +78,6 @@ a:link{
 a:hover{
   color: #E7436D;
   text-decoration: underline;
-}
-#competitiveAnalysis{
-  padding: 6%;
 }
 
 #conclusion{
