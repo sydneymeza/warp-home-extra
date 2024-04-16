@@ -1,89 +1,99 @@
 @font-face {
-  font-family: 'BasisGrotesk'; 
-  src: url('typefaces/BasisGrotesquePro-Light 2.otf'); 
+  font-family: "BasisGrotesk";
+  src: url("typefaces/BasisGrotesquePro-Light 2.otf");
 }
 @font-face {
-  font-family: 'GT'; 
-  src: url('typefaces/GT-Walsheim-Pro-Light.otf'); 
+  font-family: "GT";
+  src: url("typefaces/GT-Walsheim-Pro-Light.otf");
 }
 @font-face {
-  font-family: 'MonumentGrotesk'; 
-  src: url('typefaces/monument-grotesk-regular.otf'); 
+  font-family: "MonumentGrotesk";
+  src: url("typefaces/monument-grotesk-regular.otf");
 }
 @font-face {
-  font-family: 'GoodSans'; 
-  src: url('typefaces/GoodSans-Thin.otf'); 
+  font-family: "GoodSans";
+  src: url("typefaces/GoodSans-Thin.otf");
 }
 @font-face {
-  font-family: 'Plaak'; 
-  src: url('typefaces/Plaak-25Light.otf'); 
+  font-family: "Plaak";
+  src: url("typefaces/Plaak-25Light.otf");
 }
 
-h1{
+h1 {
   font-size: 44px;
-  font-family: 'GT';
+  font-family: "GT";
 }
-h2{
+h2 {
   font-size: 24px;
   font-family: "GoodSans";
   color: #474747;
 }
-h3{
+h3 {
   font-size: 22px;
-  font-family: 'Plaak';
+  font-family: "Plaak";
   min-width: 150px;
   color: #474747;
 }
-h4{
+h4 {
   font-size: 18px;
-  font-family: 'BasisGrotesk';
+  font-family: "BasisGrotesk";
   min-width: 150px;
   color: #474747;
 }
-h5{
+h5 {
   font-size: 20px;
-  font-family: 'MonumentGrotesk';
+  font-family: "MonumentGrotesk";
 }
-p, li, th{
-  font-size:18px;
-  font-family: 'BasisGrotesk'; 
+p,
+li,
+th {
+  font-size: 18px;
+  font-family: "BasisGrotesk";
   line-height: 30px;
 }
-li:not(:last-child){
+li:not(:last-child) {
   margin-bottom: 10px;
 }
-ul {
-  width: 60%;
-}
 
-#titleArea{
+#titleArea {
   margin-left: 12%;
   margin-right: 12%;
   margin-top: 8%;
   /* margin-bottom: 8%; */
 }
-#overview{
+
+.section {
   margin-left: 12%;
   margin-right: 12%;
   margin-top: 4%;
   margin-bottom: 4%;
 }
 
-
-a:link{
+a:link {
   color: #313131;
   text-decoration: none;
-
 }
-a:hover{
-  color: #E7436D;
+a:hover {
+  color: #e7436d;
   text-decoration: underline;
 }
 
-#conclusion{
+#conclusion {
   margin-bottom: 12%;
   margin-left: 12%;
   margin-right: 12%;
   margin-top: 8%;
   min-width: 325px;
+}
+
+.david {
+  color: blue;
+}
+
+.vanessa {
+  color: purple;
+}
+
+.class {
+  color: darkgreen;
 }
