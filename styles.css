@@ -70,8 +70,10 @@ li:not(:last-child) {
 .section {
   margin-left: 12%;
   margin-right: 12%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 4%;
+}
+.h3-section {
+  margin-top: 5%;
 }
 
 a:link {
@@ -81,6 +83,19 @@ a:link {
 a:hover {
   color: #e7436d;
   text-decoration: underline;
+}
+
+#overview-section{
+  display: flex;
+  gap: 10%;
+}
+#tools{
+  width: 25%;
+  min-width: 230px;
+}
+.overview-text{
+  margin-bottom: 0px;
+  margin-top: 15px;
 }
 
 #conclusion {
@@ -103,9 +118,55 @@ a:hover {
   color: #74a57f;
 }
 
-img {
-  width: 98%;
-  margin-right: 2%;
+#sketches{
+  display: flex;
+  gap: 5%;
+}
+#sketch-writing{
+  width: 45%;
+}
+#carousel-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  width: 55%;
+}
+.carousel-container {
+  width: 100%;
+  height: 100%; /* Adjust height as needed */
+  overflow: hidden;
+  position: relative;
+}
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#button-section{
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+.button {
+  background-color: rgb(228, 228, 228);
+  border: none;
+  width:80px;
+  height: 25px;
+  border-radius: 10px;
+}
+.button:hover {
+  background-color: rgb(243, 243, 243);
+  border: #313131;
+  width:80px;
+  height: 25px;
+  border-radius: 10px;
 }
 
 .hor-section {
@@ -113,6 +174,24 @@ img {
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
+}
+.hor-section img {
+  width: 80%;
+  margin-right: 2%;
+}
+#style-guide-sec{
+  display: flex;
+  gap: 8%;
+}
+.styleGuide{
+  width: 100%;
+}
+#style-guide-text{
+  width: 55%;
+}
+#style-guide-images{
+  min-width: 250px;
+  width: 45%;
 }
 
 .group {
