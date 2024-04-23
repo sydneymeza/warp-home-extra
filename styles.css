@@ -184,9 +184,11 @@ a:hover {
 }
 .lofiFinal{
   width: 75%;
+  max-width: fit-content;
 }
 .lofiFlow{
   width: 100%;
+  max-width: fit-content;
 }
 #style-guide-sec{
   display: flex;
