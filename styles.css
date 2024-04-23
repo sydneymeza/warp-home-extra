@@ -179,6 +179,15 @@ a:hover {
   width: 80%;
   margin-right: 2%;
 }
+.lowfiSec{
+  /* display:flex; */
+}
+.lofiFinal{
+  width: 75%;
+}
+.lofiFlow{
+  width: 100%;
+}
 #style-guide-sec{
   display: flex;
   gap: 8%;
