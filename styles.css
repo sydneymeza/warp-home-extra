@@ -123,13 +123,13 @@ a:hover {
   gap: 5%;
 }
 #sketch-writing{
-  width: 45%;
+  width: 25%;
 }
 #carousel-section{
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 250px;
+  min-width: 600px;
   width: 55%;
 }
 .carousel-container {
